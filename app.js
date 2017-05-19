@@ -12,7 +12,7 @@ var app = azbn.loadApp(module);
 
 var argv = require('optimist').argv;
 
-azbn.setMdl('config', app.loadJSON('config/main'));
+azbn.setMdl('config', require('./config/main'));
 
 azbn.mdl('config').port.http = argv.httpport || azbn.mdl('config').port.http || 3000;
 azbn.mdl('config').port.https = argv.httpsport || azbn.mdl('config').port.https || 3001;
