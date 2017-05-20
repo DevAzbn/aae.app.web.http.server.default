@@ -37,10 +37,10 @@ function _(app, azbn) {
 					notifies : [],
 				},
 				response : {
-					params : req.params,
-					query : req.query,
-					body : req.body,
-					msg : _msg,
+					params : req.params,//from url
+					query : req.query,//_get
+					body : req.body,//_post
+					msg : _msg,//from fork
 				},
 			});
 			
